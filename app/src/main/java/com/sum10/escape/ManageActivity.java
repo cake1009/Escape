@@ -32,7 +32,7 @@ public class ManageActivity extends AppCompatActivity {
 
     private String theme;
     private EditText hintcode_text;
-    private EditText hint_text;
+    //private EditText hint_text;
     private EditText answer_text;
     private ImageView hint_image;
     private int hintcode;
@@ -56,7 +56,7 @@ public class ManageActivity extends AppCompatActivity {
         Button list_button = findViewById(R.id.hintlist);
         Button image_button = findViewById(R.id.imagebutton);
         hintcode_text = findViewById(R.id.hintcodeedit);
-        hint_text = findViewById(R.id.hintedit);
+        //hint_text = findViewById(R.id.hintedit);
         answer_text = findViewById(R.id.answeredit);
         hint_image = findViewById(R.id.hintimage);
 
@@ -72,11 +72,11 @@ public class ManageActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (!hintcode_text.getText().toString().equals("") && !answer_text.getText().toString().equals("")) {
                     hintcode = Integer.parseInt(hintcode_text.getText().toString());
-                    hint = hint_text.getText().toString();
+                    //hint = hint_text.getText().toString();
                     answer = answer_text.getText().toString(); //각각 변수에 EditText에 있던 텍스트를 저장
                     dbHelper.insert(theme, hintcode, hint, answer, imageuri); //데이터베이스에 저장
                     hintcode_text.setText("");
-                    hint_text.setText("");
+                    //hint_text.setText("");
                     answer_text.setText(""); // EditText 초기화
                     hint_image.setImageResource(0);
                     Toast.makeText(getApplicationContext(), "힌트 정보가 저장되었습니다.", Toast.LENGTH_LONG).show();

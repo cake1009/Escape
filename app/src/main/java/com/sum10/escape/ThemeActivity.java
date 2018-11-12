@@ -52,7 +52,7 @@ public class ThemeActivity extends AppCompatActivity {
     private Button answer_button;
     private TextView title_text;
     private TextView hintcount_text;
-    private TextView hint_text;
+    //private TextView hint_text;
     private TextView answer_text;
     private EditText code_text;
     private TextView timer_text;
@@ -74,7 +74,7 @@ public class ThemeActivity extends AppCompatActivity {
         start_button = findViewById(R.id.startbutton);
         answer_button = findViewById(R.id.answerbutton);
         hintcount_text = findViewById(R.id.hintcount);
-        hint_text = findViewById(R.id.hinttext);
+        //hint_text = findViewById(R.id.hinttext);
         answer_text = findViewById(R.id.answertext);
         code_text = findViewById(R.id.hintcode);
         timer_text = findViewById(R.id.timer);
@@ -100,7 +100,7 @@ public class ThemeActivity extends AppCompatActivity {
                     code_text.setText(""); // 입력한 힌트코드 날림
                     answer_text.setText(""); // 기존에 띄워진 정답 날림
                     if (!hint.equals("-") ) { // 힌트가 있을 경우에만
-                        hint_text.setText(hint); // 힌트 설명을 텍스트뷰에 뿌림
+                        //hint_text.setText(hint); // 힌트 설명을 텍스트뷰에 뿌림
                         count++; //힌트를 사용할 때마다 count가 올라감
 
                         if (!imageuri.equals("-") && !imageuri.equals("null"))
@@ -126,7 +126,7 @@ public class ThemeActivity extends AppCompatActivity {
             public void onClick(View view) { // 정답버튼 클릭시
                 answer = dbHelper.getAnswer(theme, hintcode); // 현재 뿌려진 힌트 설명에 맞는 정답을 가져옴
                 hintcode = null;
-                hint_text.setText(""); // 정답이 보여지면 힌트는 필요없기 떄문에 날림
+                //hint_text.setText(""); // 정답이 보여지면 힌트는 필요없기 떄문에 날림
                 hint_image.setImageResource(0); // 이미지도 같이 날림
 
                 if (!answer.equals("-")) {
