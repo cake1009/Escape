@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Manage2Activity"
+    tools:layout_editor_absoluteY="89dp">
+
+    <EditText
+        android:id="@+id/nametext"
+        android:layout_width="320dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="240dp"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="128dp"
+        android:ems="10"
+        android:hint="테마 이름을 입력해주세요."
+        android:inputType="text"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/explaintext"
+        android:layout_width="350dp"
+        android:layout_height="495dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="128dp"
+        android:ems="10"
+        android:hint="테마 설명을 입력해주세요."
+        android:inputType="textMultiLine"
+        android:maxLines="15"
+        android:minLines="2"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/themeimg"
+        app:layout_constraintTop_toBottomOf="@+id/nametext" />
+
+    <ImageView
+        android:id="@+id/themeimg"
+        android:layout_width="350dp"
+        android:layout_height="495dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="128dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nametext"
+        app:srcCompat="@android:color/transparent" />
+
+    <Button
+        android:id="@+id/insertimg"
+        android:layout_width="180dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="48dp"
+        android:text="사진 추가"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/themeimg" />
+
+    <Button
+        android:id="@+id/addtheme"
+        android:layout_width="0dp"
+        android:layout_height="90dp"
+        android:text="테마 추가"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/deletetheme" />
+
+    <Button
+        android:id="@+id/deletetheme"
+        android:layout_width="0dp"
+        android:layout_height="90dp"
+        android:text="테마 삭제"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/addtheme"
+        app:layout_constraintStart_toStartOf="parent" />
+</android.support.constraint.ConstraintLayout>

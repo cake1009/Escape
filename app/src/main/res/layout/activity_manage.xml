@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sum10.escape.ManageActivity"
+    tools:layout_editor_absoluteY="89dp">
+
+    <EditText
+        android:id="@+id/hintcodeedit"
+        android:layout_width="340dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="140dp"
+        android:ems="10"
+        android:hint="힌트 코드. 숫자만 입력됩니다."
+        android:inputType="number"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/hintedit"
+        android:layout_width="340dp"
+        android:layout_height="500dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="60dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="힌트를 작성해주세요.
+엔터 키도 적용됩니다."
+        android:inputType="textMultiLine"
+        android:scrollHorizontally="false"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hintcodeedit" />
+
+    <EditText
+        android:id="@+id/answeredit"
+        android:layout_width="340dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="60dp"
+        android:ems="10"
+        android:hint="정답. 숫자/알파벳을 입력하세요."
+        android:inputType="text"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hintedit" />
+
+    <Button
+        android:id="@+id/addhint"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:text="추가"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/hintlist" />
+
+    <Button
+        android:id="@+id/deletehint"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:text="삭제"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/hintlist"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/hintlist"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:text="힌트 목록"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/addhint"
+        app:layout_constraintStart_toEndOf="@+id/deletehint" />
+
+    <ImageView
+        android:id="@+id/hintimage"
+        android:layout_width="340dp"
+        android:layout_height="500dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="280dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/hintedit"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:color/transparent" />
+
+    <Button
+        android:id="@+id/imagebutton"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="60dp"
+        android:text="사진 추가"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/answeredit"
+        app:layout_constraintTop_toBottomOf="@+id/hintimage" />
+
+</android.support.constraint.ConstraintLayout>
